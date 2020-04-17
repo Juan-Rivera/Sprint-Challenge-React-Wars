@@ -1,19 +1,25 @@
 // Write your Character component here
 import React from 'react'
+import CContainer from './CContainer';
+import CIContainer from './CIContainer';
 
+export default function Character(props) {
+    const {image, name, status, species, gender, origin } = props
+    console.log(name, status, species, gender, origin);
 
-export default function Character({Character}) {
 return(
-    <div className='characters-container'>
+    <CContainer>
         <div className='img-container'>
-            
-            <p>Hello World</p>
+            <img src={image} alt='character headshot'></img>
         </div>
-
-        <div className='character-info'>
-          
-        </div>
-
-    </div>
+        <CIContainer>
+          <h2>{name}</h2>
+          <p>Status: {status}</p>
+          <p>Species: {species}</p>
+          <p>Gender: {gender}</p>
+          <p>Origin: {origin}</p>
+        
+        </CIContainer>
+    </CContainer>
 )
 }
