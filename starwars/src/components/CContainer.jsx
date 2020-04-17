@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const CContainer = styled.div`
         width: 360px;
-        height: 150px;
+        height: 160px;
         margin: 0 auto;
         font-size: 0.5rem;
         display: flex;
